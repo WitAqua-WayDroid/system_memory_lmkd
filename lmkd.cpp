@@ -3720,8 +3720,8 @@ static bool init_monitors() {
         (!init_mp_common(VMPRESS_LEVEL_LOW) ||
         !init_mp_common(VMPRESS_LEVEL_MEDIUM) ||
         !init_mp_common(VMPRESS_LEVEL_CRITICAL))) {
-        ALOGE("Kernel does not support memory pressure events or in-kernel low memory killer");
-        return false;
+        ALOGI("Kernel does not support memory pressure events or in-kernel low memory killer");
+        return true;
     }
     if (use_psi_monitors) {
         ALOGI("Using psi monitors for memory pressure detection");
