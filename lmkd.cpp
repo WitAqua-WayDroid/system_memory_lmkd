@@ -3652,7 +3652,7 @@ static bool init_monitors() {
 
     if (!init_psi_monitors()) {
         ALOGE("Failed to initialize PSI monitors");
-        return false;
+        return true;
     }
 
     ALOGI("Using psi monitors for memory pressure detection");
